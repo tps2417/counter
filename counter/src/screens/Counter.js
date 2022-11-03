@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, styles } from "../components/Button";
+import { Button } from "../components/Button";
 
 export const Counter = () => {
   // const [state, setState] = useState(初期値);
@@ -19,11 +19,26 @@ export const Counter = () => {
 
   return (
     <div>
-      <p class="counts">{count}</p>
-      <span>
+      <p style={styles.countText}>{count}</p>
+      <div style={styles.buttonArea}>
         <Button name="＋" number="3" color="red" onClick={plus} />
         <Button name="−" onClick={minus} />
-      </span>
+      </div>
     </div>
   );
+};
+
+const styles = {
+  countText: {
+    color: "blue",
+  },
+
+  buttonArea: {
+    color: "red",
+    backgroundColor: "blue",
+    // margin: "300px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 };
