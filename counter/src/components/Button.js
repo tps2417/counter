@@ -1,22 +1,22 @@
 import React from "react";
 
 export const Button = (props) => {
-  console.log(props);
   return (
-    <span>
-      <button onClick={props.onClick} style={styles.count}>
-        {props.name}
-      </button>
-    </span>
+    <button onClick={props.onClick} style={styles.count}>
+      {props.name}
+    </button>
   );
 };
 
 const styles = {
   count: {
-    // color: "red",
-    backgroundColor: "red",
-    width: 80,
-    height: "80px",
-    borderRadius: "50%",
+    color: "white",
+    backgroundColor: "gray",
+    fontSize: "32px",
+    width: "100px",
+    borderRadius: "40px",
+    margin: "30px",
+    padding: "20px",
+    boxSizing: "border-box",
   },
 };

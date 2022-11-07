@@ -6,12 +6,10 @@ export const Counter = () => {
   const [count, setCount] = useState(0);
 
   const plus = () => {
-    console.log("ボタン押した");
     setCount(count + 1);
   };
 
   const minus = () => {
-    console.log("マイナス");
     if (count > 0) {
       setCount(count - 1);
     }
@@ -19,10 +17,12 @@ export const Counter = () => {
 
   return (
     <div>
-      <p style={styles.countText}>{count}</p>
+      <div>
+        <p style={styles.countText}>{count}</p>
+      </div>
       <div style={styles.buttonArea}>
         <Button name="＋" number="3" color="red" onClick={plus} />
-        <Button name="−" onClick={minus} />
+        <Button name="-" onClick={minus} />
       </div>
     </div>
   );
@@ -30,13 +30,15 @@ export const Counter = () => {
 
 const styles = {
   countText: {
-    color: "blue",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "black",
+    fontSize: "48px",
   },
 
   buttonArea: {
     color: "red",
-    backgroundColor: "blue",
-    // margin: "300px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
